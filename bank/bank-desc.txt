@@ -1,1 +1,65 @@
+﻿
+1. Título: Marketing del banco
+
+2. Fuentes
+   Creado por: Paulo Cortez (Univ. Minho) y Sérgio Moro (ISCTE-IUL) @ 2012
+   
+3. Uso pasado:
+
+  El conjunto de datos completo fue descrito y analizado en:
+
+  S. Moro, R. Laureano y P. Cortez. Usando la minería de datos para el marketing directo del banco: Una aplicación de la metodología CRISP-DM. 
+  En P. Novais y otros (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, 
+  Portugal, octubre de 2011. EUROSIS.
+
+4. Información relevante:
+
+   Los datos están relacionados con las campañas de marketing directo de una institución bancaria portuguesa. 
+   Las campañas de marketing se basaron en llamadas telefónicas. A menudo, se requería más de un contacto con el mismo cliente, 
+   para poder acceder si el producto (depósito bancario a plazo) sería (o no) suscrito. 
+
+   Hay dos conjuntos de datos: 
+      1) bank-full.csv con todos los ejemplos, ordenados por fecha (de mayo de 2008 a noviembre de 2010).
+      2) bank.csv con el 10% de los ejemplos (4521), seleccionados al azar de bank-full.csv.
+   Se proporciona el conjunto de datos más pequeño para probar los algoritmos de aprendizaje automático más exigentes desde el punto de vista informático (por ejemplo, SVM).
+
+   El objetivo de la clasificación es predecir si el cliente suscribirá un depósito a plazo (variable y).
+
+5. Número de instancias: 45211 para bank-full.csv (4521 para bank.csv)
+
+6. Número de atributos: 16 + atributo de salida.
+
+7. Información del atributo:
+
+   Para más información, lea [Moro et al., 2011].
+
+   Variables de entrada:
+   # datos del cliente bancario:
+   1 - age: edad: (numérica)
+   2 - job: trabajo: tipo de trabajo 
+			(categórico: "admin.", "desconocido", "desempleado", "dirección", "criada", "empresario", 
+				"estudiante", "obrero", "autónomo", "jubilado", "técnico", "servicios") 
+			(categorical: "admin.", "unknown", "unemployed", "management", "housemaid", "entrepreneur", 
+				"student", "blue-collar", "self-employed", "retired", "technician", "services") 
+   3 - marital: marital: estado civil (categórico: "casado", "divorciado", "soltero"; nota: "divorciado" significa divorciado o viudo)
+   4 - education: educación: (categórica: "desconocida", "secundaria", "primaria", "terciaria")
+   5 - default: incumplimiento: ¿tiene el crédito en mora? (binario: "sí", "no")
+   6 - balance: saldo: saldo medio anual, en euros (numérico) 
+   7 - housing vivienda: ¿tiene préstamo de vivienda? (binario: "sí", "no")
+   8 - loan: préstamo: ¿tiene préstamo personal? (binario: "sí", "no")
+   # relacionados con el último contacto de la actual campaña:
+   9 - contact: contacto: tipo de comunicación del contacto (categórico: "desconocido", "teléfono", "celular") 
+  10 - day: día: último día de contacto del mes (numérico)
+  11 - month: mes: último mes de contacto del año (categórico: "jan", "feb", "mar", ..., "nov", "dec")
+  12 - duration: duración: duración del último contacto, en segundos (numérico)
+   # otros atributos:
+  13 - campain: campaña: número de contactos realizados durante esta campaña y para este cliente (numérico, incluye el último contacto)
+  14 - pdays: número de días que pasaron después de que el cliente fue contactado por última vez de una campaña anterior (numérico, -1 significa que el cliente no fue contactado previamente)
+  15 - previous: anterior: número de contactos realizados antes de esta campaña y para este cliente (numérico)
+  16 - poutcome: resultado de la anterior campaña de comercialización (categórico: "desconocido", "otro", "fracaso", "éxito")
+
+  Variable de salida (objetivo deseado):
+  17 - y - ¿el cliente ha suscrito un depósito a plazo? (binario: "sí", "no")
+
+8. Valores de atributo faltantes: Ninguno
 
